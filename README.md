@@ -3,6 +3,7 @@ This game is an avoidance game where you drive a car and avoid hitting the appro
 
 
 TODO:
+
 [x] Allow car to move left or right
 
 [x] Create boundaries at edge of screen
