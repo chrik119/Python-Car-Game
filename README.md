@@ -25,3 +25,5 @@ TODO:
 [] Sound
 
 [] Clean up code
+
+[] Use better Car sprite and improved collision detection
