@@ -1,6 +1,7 @@
 # Python-Car-Game
 This game is an avoidance game where you drive a car and avoid hitting the approaching blocks
 
+To play the game you must have python3 installed and run python3 CarGame.py
 
 TODO:
 
@@ -20,10 +21,12 @@ TODO:
 
 [x] Start menu
 
-[] Pause button
+[x] Pause button
 
 [] Sound
 
 [] Clean up code
 
-[] Use better Car sprite and improved collision detection
+[x] Use better Car sprite and improved collision detection
+
+[x] Leaderboard
