@@ -1,7 +1,7 @@
 # Python-Car-Game
-This game is an avoidance game where you drive a car and avoid hitting the approaching blocks
+This game is an avoidance game where you drive a car and avoid hitting the approaching cars.
 
-To play the game you must have python3 installed and run python3 CarGame.py
+To play the game you must have python3 and pygame library installed. You can download python3 at https://www.python.org/downloads/ and pygame at https://www.pygame.org/wiki/GettingStarted. To play the game run python3 CarGame.py in your terminal.
 
 TODO:
 
