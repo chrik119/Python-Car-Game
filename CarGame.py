@@ -21,9 +21,6 @@ class Window:
         self.clock.tick(fps)
         pygame.display.set_caption(caption)
 
-    def tick(self):
-        self.clock.tick(fps)
-
     def message(self, linesOfText, cx, ty, font=None, size=25, color=black):
         style = pygame.font.Font(font, size)
         i = 0
@@ -74,6 +71,7 @@ class Car(Sprite):
     def __init__(self, x, y, w, h, i, ns):
         Sprite.__init__(self, x, y, w, h, i)
         self.noSpoiler = ns
+        self.steerSpeed = 7
 
 #OBSTACLE
 class Obstacle(Sprite):
@@ -187,9 +185,9 @@ def GameLoop(screen):
         keys = pygame.key.get_pressed()
         if not crashed and not paused:
             if keys[pygame.K_LEFT]:
-                car.x += -7
+                car.x += -car.steerSpeed
             if keys[pygame.K_RIGHT]:
-                car.x += 7
+                car.x += car.steerSpeed
 
         #DRAW
         screen.gameDisplay.blit(background[b], (0, 0))
@@ -219,6 +217,7 @@ def GameLoop(screen):
             obstacle.x = random.randrange(62, screen.width - obstacle.width - 60)
             score += 1
             obstacle.speed += 1
+            car.steerSpeed += .02
 
 
         if car.y < obstacle.y+obstacle.height and car.y + 109 > obstacle.y:
