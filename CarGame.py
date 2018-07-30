@@ -217,11 +217,11 @@ def GameLoop(screen):
             obstacle.x = random.randrange(62, screen.width - obstacle.width - 60)
             score += 1
             obstacle.speed += 1
-            car.steerSpeed += .02
+            car.steerSpeed += .05
 
-
-        if car.y < obstacle.y+obstacle.height and car.y + 109 > obstacle.y:
-            if car.x + 25 > obstacle.x and car.x + 25 < obstacle.x + obstacle.width or car.x + car.width - 25 > obstacle.x and car.x + car.width - 25 < obstacle.x + obstacle.width:
+        #Collision Detection With Obstacle
+        if car.y + 7 < obstacle.y+obstacle.height and car.y + 109 > obstacle.y:
+            if car.x + 30 > obstacle.x and car.x + 30 < obstacle.x + obstacle.width or car.x + car.width - 25 > obstacle.x and car.x + car.width - 25 < obstacle.x + obstacle.width:
                 update = crashed_message(score, update)
                 crashed = True
         if car.y + 110 < obstacle.y+obstacle.height and car.y + car.noSpoiler > obstacle.y:
